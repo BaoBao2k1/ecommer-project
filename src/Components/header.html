@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link CSS Tailwind -->
+    <link rel="stylesheet"  href="../../../dist/output.css" />
+    <!-- Main.css chinh -->
+    <link rel="stylesheet" href="../../../css/Main.css" />
+</head>
+<body>
+    <header>
+      <!-- Notification -->
+      <section id="notification">
+        <div class="bg-p-500 max-w-full py-2.5 text-center">
+          <p class="text-xs md:text-sm text-white font-normal">
+            Due to current circumstances, there may be slight delays in order
+            processing
+          </p>
+        </div>
+      </section>
+
+      <!--Top mini menu -->
+      <section id="topbarmenu" class="hidden md:block">
+        <div
+          class="container w-full flex justify-between items-center py-3 text-sm"
+        >
+          <div class="flex gap-3.5">
+            <a href="#">About</a>
+            <a href="#">Compare</a>
+            <a href="#">Wishlist</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2.5">
+              <img src="../../assets/img/Icon.png" alt="Icon" />
+              <p>100% Secure delivery without contacting the courier</p>
+            </div>
+
+            <div class="px-4 border-l-2">
+              <p>
+                Need help? Call Us:
+                <span class="text-p-500 font-bold"> + 0020 500</span>
+              </p>
+            </div>
+
+            <div class="flex gap-3.5">
+              <div class="flex items-center">
+                <p>English</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <p>USD</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- header -->
+      <section id="header" class="border-[#E3E4E6] border-t-2">
+        <div
+          class="container py-4 flex items-center gap-6 flex-wrap md:flex-nowrap"
+        >
+          <!-- LOGO -->
+          <img src="../../assets/img/Logo.png" alt="Logo" class="flex-shrink-0" />
+
+          <!-- SEARCH -->
+          <div class="relative flex-1 w-full md:w-auto md:order-none order-3">
+            <input
+              type="text"
+              placeholder="Search for Products, fruit, meat, eggs .etc..."
+              class="border-none w-full bg-[#F3F4F7] p-5 outline-none rounded-2xl"
+            />
+            <svg
+              class="size-5 text-gray-500 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-4.35-4.35M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex items-center gap-4 flex-shrink-0 ml-auto">
+            <!-- USER -->
+            <div
+              class="w-[42px] h-[42px] rounded-full border border-[#E2E4EC] flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0"
+                />
+              </svg>
+            </div>
+
+            <!-- PRICE + CART -->
+            <div class="flex items-center gap-3">
+              <p>$0.00</p>
+              <div
+                class="w-[42px] h-[42px] rounded-full bg-[#FFF1EE] flex items-center justify-center relative"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 text-red-500"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                  />
+                </svg>
+
+                <!-- badge -->
+                <span
+                  class="absolute -top-1 -right-1 text-white w-[17px] h-[17px] bg-n-600 rounded-full flex items-center justify-center text-xs"
+                >
+                  0
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- menu -->
+      <section id="menu" class="hidden md:block">
+        <div class="container flex justify-between items-center">
+          
+          <div class="megamenu w-full rounded-full md:w-[213px] h-14 bg-p-500 text-white flex items-center justify-center gap-1.5 group relative ">
+            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <h4 class="text-white font-semibold text-sm">ALL CATEGORIES</h4>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4 ml-3"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            
+            <div class="absolute left-0 top-full mt-2 bg-white border border-gray-200 shadow-xl 
+                        w-[260px] opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                        transition-all duration-200 z-40">
+                  <ul class="flex flex-col py-2 text-gray-700">
+                    
+                    <!-- Mục có submenu -->
+                    <li class="relative group/item hover:bg-gray-50">
+                      <div class="flex items-center justify-between px-5 py-2 cursor-pointer">
+                        <div class="flex items-center gap-2">
+                          <img src="../../assets/img/icon-bef-menu.png" class="w-4 h-4" alt="icon" />
+                          <span>Fruits & Vegetables</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                          stroke-width="2" stroke="currentColor" class="size-4 text-gray-400">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+
+                      <!-- Submenu nằm bên phải -->
+                      <div class="absolute top-0 left-full bg-white border border-gray-200 shadow-lg w-[300px] p-4
+                              opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible 
+                              transition-all duration-200" >
+                        <h4 class="font-semibold text-gray-800 mb-2">Fruits & Vegetables</h4>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li class="hover:text-p-500">Cuts & Sprouts</li>
+                          <li class="hover:text-p-500">Exotic Fruits & Veggies</li>
+                          <li class="hover:text-p-500">Fresh Fruits</li>
+                          <li class="hover:text-p-500">Fresh Vegetables</li>
+                          <li class="hover:text-p-500">Herbs & Seasonings</li>
+                          <li class="hover:text-p-500">Packaged Produce</li>
+                          <li class="hover:text-p-500">Party Trays</li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <!-- Các mục khác có thể chỉ là link đơn -->
+                    <li class="px-5 py-2 hover:bg-gray-50 flex items-center gap-2">
+                      <img src="../../assets/img/icon-bef-menu.png" class="w-4 h-4" alt="icon" />
+                      <span>Meats & Seafood</span>
+                    </li>
+                    <li class="px-5 py-2 hover:bg-gray-50 flex items-center gap-2">
+                      <img src="../../assets/img/icon-bef-menu.png" class="w-4 h-4" alt="icon" />
+                      <span>Breakfast & Dairy</span>
+                    </li>
+                    <li class="px-5 py-2 hover:bg-gray-50 flex items-center gap-2">
+                      <img src="../../assets/img/icon-coffe-menu.png" class="w-4 h-4" alt="icon" />
+                      <span>Beverages</span>
+                    </li>
+
+                    <div class="border-t border-gray-100 my-1"></div>
+
+                    <li class="px-5 py-2 text-gray-500 text-sm hover:text-p-500">Value of the Day</li>
+                    <li class="px-5 py-2 text-gray-500 text-sm hover:text-p-500">Top 100 Offers</li>
+                    <li class="px-5 py-2 text-gray-500 text-sm hover:text-p-500">New Arrivals</li>
+                  </ul>
+                </div>
+          
+          </div>
+
+            <nav class="hidden md:block">
+              <ul class="flex items-center gap-8">
+                <li class="flex items-center menu-link">
+                  <a href="/">Home</a>
+                </li>
+                <li class="menu-link flex gap-2.5">
+                  <a href="../pages/page-shop.html">Shop</a>
+                </li>
+                <li class="menu-link flex gap-2.5 relative group">
+                  <img src="../../assets/img/icon-bef-menu.png" alt="icon-bef-menu" />
+                  <a href="#">Meats & Seafood</a>
+                    <div class="absolute  top-full mt-2 bg-white border border-gray-200 shadow-lg rounded-lg 
+                        grid grid-cols-4 gap-10 p-6 w-[720px]
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                        transition-all duration-200 cursor-pointer">
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                      </ul>
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-link flex gap-2.5 relative group">
+                  <img
+                    src="../../assets/img/icon-barakey-menu.png"
+                    alt="icon-barakey-menu"
+                  />
+                  <a href="#">Bakery</a>
+                  <div class="absolute  top-full mt-2 bg-white border border-gray-200 shadow-lg rounded-lg 
+                        grid grid-cols-4 gap-10 p-6 w-[720px]
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                        transition-all duration-200 cursor-pointer">
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-link flex gap-2.5 relative group">
+                  <img
+                    src="../../assets/img/icon-coffe-menu.png"
+                    alt="icon-coffe-menu"
+                  />
+                  <a href="#">Beverages</a>
+                  <div class="absolute  top-full mt-2 bg-white border border-gray-200 shadow-lg rounded-lg 
+                        grid grid-cols-4 gap-10 p-6 w-[720px]
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                        transition-all duration-200 cursor-pointer">
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-link"><a href="../pages/page-blog.html">Blog</a></li>
+                <li class="menu-link"><a href="../pages/Contact.html">Contact</a></li>
+              </ul>
+            </nav>
+
+        </div>
+      </section>
+    </header>
+
+
+    
+</body>
+</html>

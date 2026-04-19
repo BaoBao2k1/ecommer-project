@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link CSS Tailwind -->
+    <link rel="stylesheet" href="../../../dist/output.css" />
+    <!-- Main.css chinh -->
+    <link rel="stylesheet" href="../../../css/Main.css" />
+</head>
+<body>
+   <header class="relative z-50">
+      <!-- Notification -->
+      <section id="notification">
+        <div class="bg-p-500 max-w-full py-2.5 text-center">
+          <p class="text-xs md:text-sm text-white font-normal">
+            Due to current circumstances, there may be slight delays in order
+            processing
+          </p>
+        </div>
+      </section>
+
+      <!--Top mini menu -->
+      <section id="topbarmenu" class="hidden md:block">
+        <div
+          class="container w-full flex justify-between items-center py-3 text-sm"
+        >
+          <div class="flex gap-3.5">
+            <a href="#">About</a>
+            <a href="#">Compare</a>
+            <a href="#">Wishlist</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2.5">
+              <img src="../../../assets/img/Icon.png" alt="Icon" />
+              <p>100% Secure delivery without contacting the courier</p>
+            </div>
+
+            <div class="px-4 border-l-2">
+              <p>
+                Need help? Call Us:
+                <span class="text-p-500 font-bold"> + 0020 500</span>
+              </p>
+            </div>
+
+            <div class="flex gap-3.5">
+              <div class="flex items-center">
+                <p>English</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <p>USD</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- header -->
+      <section id="header" class="border-[#E3E4E6] border-t-2">
+        <div
+          class="container py-4 flex items-center gap-6 flex-wrap md:flex-nowrap"
+        >
+          <!-- LOGO -->
+          <h1><img src="../../../assets/img/Logo.png" alt="Logo" class="flex-shrink-0" /></h1>
+
+          <!-- SEARCH -->
+          <div class="relative flex-1 w-full md:w-auto md:order-none order-3">
+            <input
+              type="text"
+              placeholder="Search for Products, fruit, meat, eggs .etc..."
+              class="border-none w-full bg-[#F3F4F7] p-5 outline-none rounded-2xl"
+            />
+            <svg
+              class="size-5 text-gray-500 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-4.35-4.35M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex items-center gap-4 flex-shrink-0 ml-auto">
+            <!-- USER -->
+             <a href="../Product/login.html">
+                <div class="w-[42px] h-[42px] rounded-full border border-[#E2E4EC] flex items-center justify-center" >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                >
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0"
+                    />
+                </svg>
+                </div>
+            </a>
+            <!-- PRICE + CART -->
+            <div class="flex items-center gap-3">
+              <p>$0.00</p>
+              <a href="./login.html">
+                <div
+                    class="w-[42px] h-[42px] rounded-full bg-[#FFF1EE] flex items-center justify-center relative"
+                >
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 text-red-500"
+                    >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                    </svg>
+
+                    <!-- badge -->
+                    <span
+                    class="absolute -top-1 -right-1 text-white w-[17px] h-[17px] bg-n-600 rounded-full flex items-center justify-center text-xs"
+                    >
+                    0
+                    </span>
+                </div>
+               </a> 
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- menu -->
+      <section id="menu" class="hidden md:block">
+        <div class="container flex justify-between items-center">
+          
+          <div class="megamenu w-full rounded-full md:w-[213px] h-14 bg-p-500 text-white flex items-center justify-center gap-1.5 group relative ">
+            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <h4 class="text-white font-semibold text-sm">ALL CATEGORIES</h4>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4 ml-3"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            
+            <div class="absolute left-0 top-full mt-2 bg-white border border-gray-200 shadow-xl 
+                        w-[260px] opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                        transition-all duration-200 z-40">
+                  <ul class="flex flex-col py-2 text-gray-700">
+                    
+                    <!-- Mục có submenu -->
+                    <li class="relative group/item hover:bg-gray-50">
+                      <div class="flex items-center justify-between px-5 py-2 cursor-pointer">
+                        <div class="flex items-center gap-2">
+                          <img src="../../../assets/img/icon-barakey-menu.png" class="w-4 h-4" alt="icon" />
+                          <span>Fruits & Vegetables</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                          stroke-width="2" stroke="currentColor" class="size-4 text-gray-400">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+
+                      <!-- Submenu nằm bên phải -->
+                      <div class="absolute top-0 left-full bg-white border border-gray-200 shadow-lg w-[300px] p-4
+                              opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible 
+                              transition-all duration-200" >
+                        <h4 class="font-semibold text-gray-800 mb-2">Fruits & Vegetables</h4>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li class="hover:text-p-500">Cuts & Sprouts</li>
+                          <li class="hover:text-p-500">Exotic Fruits & Veggies</li>
+                          <li class="hover:text-p-500">Fresh Fruits</li>
+                          <li class="hover:text-p-500">Fresh Vegetables</li>
+                          <li class="hover:text-p-500">Herbs & Seasonings</li>
+                          <li class="hover:text-p-500">Packaged Produce</li>
+                          <li class="hover:text-p-500">Party Trays</li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <!-- Các mục khác có thể chỉ là link đơn -->
+                    <li class="px-5 py-2 hover:bg-gray-50 flex items-center gap-2">
+                      <img src="../../../assets/img/icon-barakey-menu.png" class="w-4 h-4" alt="icon" />
+                      <span>Meats & Seafood</span>
+                    </li>
+                    <li class="px-5 py-2 hover:bg-gray-50 flex items-center gap-2">
+                      <img src="../../../assets/img/icon-barakey-menu.png" class="w-4 h-4" alt="icon" />
+                      <span>Breakfast & Dairy</span>
+                    </li>
+                    <li class="px-5 py-2 hover:bg-gray-50 flex items-center gap-2">
+                      <img src="../../../assets/img/icon-barakey-menu.png" class="w-4 h-4" alt="icon" />
+                      <span>Beverages</span>
+                    </li>
+
+                    <div class="border-t border-gray-100 my-1"></div>
+
+                    <li class="px-5 py-2 text-gray-500 text-sm hover:text-p-500">Value of the Day</li>
+                    <li class="px-5 py-2 text-gray-500 text-sm hover:text-p-500">Top 100 Offers</li>
+                    <li class="px-5 py-2 text-gray-500 text-sm hover:text-p-500">New Arrivals</li>
+                  </ul>
+                </div>
+          
+          </div>
+
+            <nav class="hidden md:block">
+              <ul class="flex items-center gap-8">
+                <li class="flex items-center menu-link">
+                  <a href="/">Home</a>
+                </li>
+                <li class="menu-link flex gap-2.5">
+                  <a href="../pages/page-shop.html">Shop</a>
+                </li>
+                <li class="menu-link flex gap-2.5 relative group">
+                  <img src="../../../assets/img/icon-bef-menu.png" alt="icon-bef-menu" />
+                  <a href="#">Meats & Seafood</a>
+                    <div class="absolute  top-full mt-2 bg-white border border-gray-200 shadow-lg rounded-lg 
+                        grid grid-cols-4 gap-10 p-6 w-[720px]
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                        transition-all duration-200 cursor-pointer">
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                      </ul>
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-link flex gap-2.5 relative group">
+                  <img
+                    src="../../../assets/img/icon-barakey-menu.png"
+                    alt="icon-barakey-menu"
+                  />
+                  <a href="#">Bakery</a>
+                  <div class="absolute  top-full mt-2 bg-white border border-gray-200 shadow-lg rounded-lg 
+                        grid grid-cols-4 gap-10 p-6 w-[720px]
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                        transition-all duration-200 cursor-pointer">
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-link flex gap-2.5 relative group">
+                  <img
+                    src="../../../assets/img/icon-coffe-menu.png"
+                    alt="icon-coffe-menu"
+                  />
+                  <a href="#">Beverages</a>
+                  <div class="absolute  top-full mt-2 bg-white border border-gray-200 shadow-lg rounded-lg 
+                        grid grid-cols-4 gap-10 p-6 w-[720px]
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                        transition-all duration-200 cursor-pointer">
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-link"><a href="../../pages/page-blog.html">Blog</a></li>
+                <li class="menu-link"><a href="../../pages/Contact.html">Contact</a></li>
+              </ul>
+            </nav>
+
+        </div>
+      </section>
+    </header>
+
+    <section>
+        <div class="container">
+            <!-- chia cot -->
+            <div class="grid  lg:grid-cols-4 md:grid-cols-1 gap-4 w-full mt-8">
+                
+                <!-- ben trai -->
+                <div class="lg:col-span-2 ">
+
+                    <!-- liên hệ -->
+                    <form action="" class="py-3 px-3 border border-gray-200 rounded-xl">
+                        <div class="flex items-center justify-between">
+                            <h3 class="heading-checkout mb-4">Contact</h3>
+                            <a  href="#" class="underline text-p-500 text-sm leading-5">Login</a>
+                        </div>
+
+                        <input class="border border-[#1773B0] py-4 rounded-sm shadow-sm outline-none pl-2 w-full text-sm placeholder:text-[#707070]" type="email" placeholder="Email or mobile phone number">
+                        
+                        <div class="flex items-center gap-3 py-5">
+                            <input type="checkbox" name="checkbox" id="checkbox" class="size-3.5">
+                            <label for="" class="text-sm leading-5">Email me with news and offers</label>
+                        </div>
+                    
+                        <!-- Thông tin đơn hàng -->
+                    
+                        <h3 class="heading-checkout mb-4">Delivery</h3>
+                            <div class="flex items-center w-full  gap-3.5 ">
+                                <div class="w-full">
+                                    <label for="">First name*</label>
+                                    <input class=" border border-gray-200 py-4 rounded-sm outline-none pl-2 w-full text-sm placeholder:text-[#707070]" type="email">
+                                </div>
+                                <div class="w-full">
+                                    <label for="">Last name*</label>
+                                    <input class=" border border-gray-200 py-4 rounded-sm outline-none pl-2 w-full text-sm placeholder:text-[#707070]" type="email">
+                                </div>
+                            </div>
+
+                            <div class="mt-5">
+                                    <label for="">Country / Region *</label>
+                                    <select name="select" id="" class="border border-gray-200 py-4 rounded-sm outline-none px-2 w-full text-sm">
+                                        <option value="">Việt Nam</option>
+                                        <option value="">USA</option>
+                                        <option value="">China</option>
+                                    </select>
+                            </div>
+
+                            <div class="mt-5">
+                                    <label for="">Address</label>
+                                    <input class=" border border-gray-200 py-4 rounded-sm outline-none pl-2 w-full text-sm placeholder:text-[#707070]" type="text" placeholder="Address">
+                                     <input class="mt-3 border border-gray-200 py-4 rounded-sm outline-none pl-2 w-full text-sm placeholder:text-[#707070]" type="text" placeholder="Apartment, suite, etc. (optional)">
+                            </div>
+
+                            <div class="flex items-center w-full mt-5 gap-3.5 ">
+                                <div class="w-full">
+                                    <label for="">ZIP Code *</label>
+                                    <input class=" border border-gray-200 py-4 rounded-sm outline-none pl-2 w-full text-sm placeholder:text-[#707070]" type="text" placeholder="Postal code (optional)">
+                                </div>
+                                <div class="w-full">
+                                    <label for="">Town / City *</label>
+                                    <input class=" border border-gray-200 py-4 rounded-sm outline-none pl-2 w-full text-sm placeholder:text-[#707070]" type="text" placeholder="City">
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 py-5">
+                                    <input type="checkbox" name="" id="" class="size-3.5">
+                                    <label for="" class="font-sm leading-5">Save this information for next time</label>
+                            </div>
+
+                            <div >
+                                <label for="">Order notes (optional)</label>
+                                <textarea rows="5" name="" id="" class="w-full border border-gray-300 rounded-sm outline-none px-2 py-2" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                            </div>
+
+                    </form>
+
+                </div>
+
+
+                <!-- ben phai -->
+                <div class="lg:col-span-2 ">
+                    <div class="border-2 border-n-600 px-3 rounded-xl py-2">
+                        <table class="w-full text-left border-collapse">
+
+                            <!-- divide-y là một tiện ích (utility class) dùng để thêm đường viền (border) giữa các phần tử con theo chiều dọc (trục y). -->
+                            <tbody class="divide-y divide-gray-200">
+                                <!-- sản phẩm 1 -->
+                                 <tr class="py-4">
+                                    <td class="flex items-center gap-3 py-3">
+                                        <div class="relative">
+                                            <img class="w-14 h-14 object-cover" src="../../../assets/product/product-image-64x64.jpg" alt="">
+                                            <span class="absolute -top-2 -left-2 bg-gray-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">1</span>
+                                        </div>
+                                        <p class="text-sm">All Natural Italian-Style Chicken Meatballs</p>
+                                    </td>
+                                    <td>
+                                        <p>$7.25</p>
+                                    </td>
+                                 </tr>
+
+                                 <tr class="py-4">
+                                    <td class="flex items-center gap-3 py-3">
+                                        <div class="relative">
+                                            <img class="w-14 h-14 object-cover" src="../../../assets/product/product-image-64x64.jpg" alt="">
+                                            <span class="absolute -top-2 -left-2 bg-gray-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">1</span>
+                                        </div>
+                                        <p class="text-sm text-clip">All Natural Italian-Style Chicken Meatballs</p>
+                                    </td>
+                                    <td>
+                                        <p>$7.25</p>
+                                    </td>
+                                 </tr>
+
+                                 <tr class="py-4">
+                                    <td class="flex items-center gap-3 py-3">
+                                        <div class="relative">
+                                            <img class="w-14 h-14 object-cover" src="../../../assets/product/product-image-64x64.jpg" alt="">
+                                            <span class="absolute -top-2 -left-2 bg-gray-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">1</span>
+                                        </div>
+                                        <p class="text-sm">All Natural Italian-Style Chicken Meatballs</p>
+                                    </td>
+                                    <td>
+                                        <p>$7.25</p>
+                                    </td>
+                                 </tr>
+                            </tbody>
+                        </table>
+                    
+                    
+                        <div class="mt-4 space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                <p>Subtotal · <span>3</span> items</p>
+                                <span id="subtotal">$14.79</span>
+                                </div>
+
+                                <div class="flex justify-between">
+                                <span>Shipping</span>
+                                <span class="text-p-500 font-medium">FREE</span>
+                                </div>
+                            </div>
+
+                            <!-- Total -->
+                            <div class="mt-4 border-t pt-4">
+                                <div class="flex justify-between font-bold text-lg">
+                                <p>Total</p>
+                                <span id="total">$14.79</span>
+                                </div>
+                            <span class="text-[#666666] font-normal">Including $2.46 in taxes</span>
+                            </div>
+
+                            <button type="submit" class="mt-2 bg-n-600 text-white py-3 px-2 w-full rounded-sm hover:bg-red-700">Pay now</button>
+                        </div>
+
+                </div>
+            
+            
+            
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-8">
+
+      <!-- email liên hệ -->
+        <section class="bg-p-500 w-full mx-auto flex items-center justify-center ">
+              <div class="container flex flex-col lg:flex-row justify-between items-center ">
+                  <div class="py-10">
+                    
+                       <p class=" font-light text-[16px] text-white leading-4 mb-2"><span class="underline">$20 discount</span> for your first order</p>
+                       <h2 class="font-inter font-semibold text-[26px] leading-8 text-white">Join our newsletter and get...</h2>
+                       <p class="text-white font-normal leading-6 text-[13px] mt-2">Join our email subscription now to get updates <br>on promotions and coupons.</p>
+                     
+                       <form class="mt-4 bg-white   md:w-auto sm:max-w-[380px] lg:mx-0 p-2 rounded-lg shadow-md flex flex-col sm:flex-row  ">
+          
+                            <div class="flex-grow flex items-center  focus-within:outline-none">
+                              <!-- Email Icon -->
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9B9BB4" class="w-5 h-5 ml-3 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                              </svg>
+                              
+                              <!-- Input  -->
+                              <input 
+                                type="email" 
+                                placeholder="Your email address" 
+                                class="w-full p-3 outline-none text-[#202435] font-inter text-sm md:text-base bg-transparent placeholder:text-gray-400"
+                                required
+                              >
+                            </div>
+
+                            
+                              <button 
+                                type="submit" 
+                                class="bg-p-500 hover:bg-green-950 text-white font-dosis font-semibold text-sm px-6 py-3 rounded transition-all duration-200 shadow-sm whitespace-nowrap w-full sm:w-auto">
+                                    Subscribe
+                              </button>
+                          </form>
+                  </div>
+                  <img src="../../../assets/product/coupon.png.png"  alt="coupon" class="w-[200px] sm:w-[260px] md:w-[320px] lg:w-auto max-h-[220px] md:max-h-[260px] h-auto object-cover lg:relative lg:top-1.5  lg:mt-0 "/>
+              </div>
+              
+          </section>
+
+
+         <section class="bg-[#F7F8FD]">
+          <div class="container mx-auto">
+              <div class=" border-b border-gray-200 py-7 lg:px-10 grid lg:grid-cols-4 md:grid-cols-2 justify-center gap-14">
+                    <div class="flex gap-4 items-center w-full max-w-[250px] justify-center sm:justify-start text-center sm:text-left">
+                      <img src="../../../assets/icon/Vector 1.png" class="w-6 h-6">
+                      <p class="text-sm">Everyday fresh products</p>
+                    </div>
+                    
+                    <div class="flex gap-4 items-center w-full max-w-[250px] justify-center sm:justify-start text-center sm:text-left">
+                      <img src="../../../assets/icon/Vector 1.png" class="w-6 h-6">
+                      <p class="text-sm">Everyday fresh products</p>
+                    </div>
+                    <div class="flex gap-4 items-center w-full max-w-[250px] justify-center sm:justify-start text-center sm:text-left">
+                      <img src="../../../assets/icon/Vector 1.png" class="w-6 h-6">
+                      <p class="text-sm">Everyday fresh products</p>
+                    </div>
+
+                    <div class="flex gap-4 items-center w-full max-w-[250px] justify-center sm:justify-start text-center sm:text-left">
+                      <img src="../../../assets/icon/Vector 1.png" class="w-6 h-6">
+                      <p class="text-sm">Everyday fresh products</p>
+                    </div>
+                </div>
+            </div>
+
+           <div class=" container lg:mt-20 grid lg:grid-cols-5 md:grid-cols-2  ">
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+              
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+
+
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+
+           </div> 
+          </section>
+
+          
+
+
+    </footer>
+</body>
+</html>

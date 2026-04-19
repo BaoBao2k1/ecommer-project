@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link CSS Tailwind -->
+    <link rel="stylesheet" href="../../../dist/output.css" />
+    <!-- Main.css chinh -->
+    <link rel="stylesheet" href="../../../css/Main.css" />
+</head>
+<body >
+    <header class="relative z-50">
+      <!-- Notification -->
+      <section id="notification">
+        <div class="bg-p-500 max-w-full py-2.5 text-center">
+          <p class="text-xs md:text-sm text-white font-normal">
+            Due to current circumstances, there may be slight delays in order
+            processing
+          </p>
+        </div>
+      </section>
+
+      <!--Top mini menu -->
+      <section id="topbarmenu" class="hidden md:block">
+        <div
+          class="container w-full flex justify-between items-center py-3 text-sm"
+        >
+          <div class="flex gap-3.5">
+            <a href="#">About</a>
+            <a href="#">Compare</a>
+            <a href="#">Wishlist</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2.5">
+              <img src="../../../assets/img/Icon.png" alt="Icon" />
+              <p>100% Secure delivery without contacting the courier</p>
+            </div>
+
+            <div class="px-4 border-l-2">
+              <p>
+                Need help? Call Us:
+                <span class="text-p-500 font-bold"> + 0020 500</span>
+              </p>
+            </div>
+
+            <div class="flex gap-3.5">
+              <div class="flex items-center">
+                <p>English</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <p>USD</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- header -->
+      <section id="header" class="border-[#E3E4E6] border-t-2">
+        <div
+          class="container py-4 flex items-center gap-6 flex-wrap md:flex-nowrap"
+        >
+          <!-- LOGO -->
+          <h1><img src="../../../assets/img/Logo.png" alt="Logo" class="flex-shrink-0" /></h1>
+
+          <!-- SEARCH -->
+          <div class="relative flex-1 w-full md:w-auto md:order-none order-3">
+            <input
+              type="text"
+              placeholder="Search for Products, fruit, meat, eggs .etc..."
+              class="border-none w-full bg-[#F3F4F7] p-5 outline-none rounded-2xl"
+            />
+            <svg
+              class="size-5 text-gray-500 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-4.35-4.35M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex items-center gap-4 flex-shrink-0 ml-auto">
+            <!-- USER -->
+             <a href="../Product/login.html">
+                <div class="w-[42px] h-[42px] rounded-full border border-[#E2E4EC] flex items-center justify-center" >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                >
+                    <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0"
+                    />
+                </svg>
+                </div>
+            </a>
+            <!-- PRICE + CART -->
+            <div class="flex items-center gap-3">
+              <p>$0.00</p>
+              <a href="./login.html">
+                <div
+                    class="w-[42px] h-[42px] rounded-full bg-[#FFF1EE] flex items-center justify-center relative"
+                >
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 text-red-500"
+                    >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                    </svg>
+
+                    <!-- badge -->
+                    <span
+                    class="absolute -top-1 -right-1 text-white w-[17px] h-[17px] bg-n-600 rounded-full flex items-center justify-center text-xs"
+                    >
+                    0
+                    </span>
+                </div>
+               </a> 
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- menu -->
+      <section id="menu" class="hidden md:block">
+        <div class="container flex justify-between items-center">
+          
+          <div class="megamenu w-full rounded-full md:w-[213px] h-14 bg-p-500 text-white flex items-center justify-center gap-1.5 group relative ">
+            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <h4 class="text-white font-semibold text-sm">ALL CATEGORIES</h4>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4 ml-3"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+            
+            <div class="absolute left-0 top-full mt-2 bg-white border border-gray-200 shadow-xl 
+                        w-[260px] opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                        transition-all duration-200 z-40">
+                  <ul class="flex flex-col py-2 text-gray-700">
+                    
+                    <!-- Mục có submenu -->
+                    <li class="relative group/item hover:bg-gray-50">
+                      <div class="flex items-center justify-between px-5 py-2 cursor-pointer">
+                        <div class="flex items-center gap-2">
+                          <img src="../../../assets/img/icon-barakey-menu.png" class="w-4 h-4" alt="icon" />
+                          <span>Fruits & Vegetables</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                          stroke-width="2" stroke="currentColor" class="size-4 text-gray-400">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+
+                      <!-- Submenu nằm bên phải -->
+                      <div class="absolute top-0 left-full bg-white border border-gray-200 shadow-lg w-[300px] p-4
+                              opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible 
+                              transition-all duration-200" >
+                        <h4 class="font-semibold text-gray-800 mb-2">Fruits & Vegetables</h4>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                          <li class="hover:text-p-500">Cuts & Sprouts</li>
+                          <li class="hover:text-p-500">Exotic Fruits & Veggies</li>
+                          <li class="hover:text-p-500">Fresh Fruits</li>
+                          <li class="hover:text-p-500">Fresh Vegetables</li>
+                          <li class="hover:text-p-500">Herbs & Seasonings</li>
+                          <li class="hover:text-p-500">Packaged Produce</li>
+                          <li class="hover:text-p-500">Party Trays</li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <!-- Các mục khác có thể chỉ là link đơn -->
+                    <li class="px-5 py-2 hover:bg-gray-50 flex items-center gap-2">
+                      <img src="../../../assets/img/icon-barakey-menu.png" class="w-4 h-4" alt="icon" />
+                      <span>Meats & Seafood</span>
+                    </li>
+                    <li class="px-5 py-2 hover:bg-gray-50 flex items-center gap-2">
+                      <img src="../../../assets/img/icon-barakey-menu.png" class="w-4 h-4" alt="icon" />
+                      <span>Breakfast & Dairy</span>
+                    </li>
+                    <li class="px-5 py-2 hover:bg-gray-50 flex items-center gap-2">
+                      <img src="../../../assets/img/icon-barakey-menu.png" class="w-4 h-4" alt="icon" />
+                      <span>Beverages</span>
+                    </li>
+
+                    <div class="border-t border-gray-100 my-1"></div>
+
+                    <li class="px-5 py-2 text-gray-500 text-sm hover:text-p-500">Value of the Day</li>
+                    <li class="px-5 py-2 text-gray-500 text-sm hover:text-p-500">Top 100 Offers</li>
+                    <li class="px-5 py-2 text-gray-500 text-sm hover:text-p-500">New Arrivals</li>
+                  </ul>
+                </div>
+          
+          </div>
+
+            <nav class="hidden md:block">
+              <ul class="flex items-center gap-8">
+                <li class="flex items-center menu-link">
+                  <a href="/">Home</a>
+                </li>
+                <li class="menu-link flex gap-2.5">
+                  <a href="../pages/page-shop.html">Shop</a>
+                </li>
+                <li class="menu-link flex gap-2.5 relative group">
+                  <img src="../../../assets/img/icon-bef-menu.png" alt="icon-bef-menu" />
+                  <a href="#">Meats & Seafood</a>
+                    <div class="absolute  top-full mt-2 bg-white border border-gray-200 shadow-lg rounded-lg 
+                        grid grid-cols-4 gap-10 p-6 w-[720px]
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                        transition-all duration-200 cursor-pointer">
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                      </ul>
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-link flex gap-2.5 relative group">
+                  <img
+                    src="../../../assets/img/icon-barakey-menu.png"
+                    alt="icon-barakey-menu"
+                  />
+                  <a href="#">Bakery</a>
+                  <div class="absolute  top-full mt-2 bg-white border border-gray-200 shadow-lg rounded-lg 
+                        grid grid-cols-4 gap-10 p-6 w-[720px]
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                        transition-all duration-200 cursor-pointer">
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-link flex gap-2.5 relative group">
+                  <img
+                    src="../../../assets/img/icon-coffe-menu.png"
+                    alt="icon-coffe-menu"
+                  />
+                  <a href="#">Beverages</a>
+                  <div class="absolute  top-full mt-2 bg-white border border-gray-200 shadow-lg rounded-lg 
+                        grid grid-cols-4 gap-10 p-6 w-[720px]
+                        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                        transition-all duration-200 cursor-pointer">
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        
+                      </ul>
+
+                      <ul class="col-span-1 space-y-2">
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+                        <li><a href="../../src/pages/page-shop.html">121212</a></li>
+
+                      </ul>
+                    </div>
+                </li>
+                <li class="menu-link"><a href="../../pages/page-blog.html">Blog</a></li>
+                <li class="menu-link"><a href="../../pages/Contact.html">Contact</a></li>
+              </ul>
+            </nav>
+
+        </div>
+      </section>
+    </header>
+
+    <main>
+        <section>
+            <div class="container mt-2">
+                    <div class="breadcrumb">
+                        <ul class="flex-item">
+                            <li class="breadcrumb-title-home"><a href="../../index.html">Home</a></li>
+                            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"  />
+                            </svg>
+
+                            <li class="breadcrumb-prodcut"><a href="#"></a>Products</li>
+                        </ul>
+                    </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+                <div class="bg-white px-10 py-10 mt-8 w-full rounded-md shadow-md">
+                    
+                    <h2 class="h2-blog text-lg md:text-xl">Lemon Cream Crunch Cookies</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-10 w-full">
+                        
+                        <div class="lg:col-span-2">
+                            
+                            <div class="w-full overflow-hidden">
+                                <img class="w-full h-[300px] md:h-[450px] lg:h-[540px]] object-cover " src="../../../assets/product/product-image-35.jpg" alt="">
+                             <div class="flex justify-center  ">
+                                <img class="w-[80px] md:w-[120px] lg:w-[150px] h-[80px] md:h-[120px] border border-transparent rounded-sm hover:border-p-500 transition-all " src="../../../assets/product/product-image-35.jpg" alt="">
+                                <img class="w-[80px] md:w-[120px] lg:w-[150px] h-[80px] md:h-[120px] border border-transparent rounded-sm hover:border-p-500 transition-all " src="../../../assets/product/product-image-35.jpg" alt="">
+                                <img class="w-[80px] md:w-[120px] lg:w-[150px] h-[80px] md:h-[120px] border border-transparent rounded-sm hover:border-p-500 transition-all " src="../../../assets/product/product-image-35.jpg" alt="">
+                            </div>
+                            </div>
+                           
+
+                        </div>
+                        
+                        <div class="lg:col-span-2">
+                           <div class="product-title mt-6 lg:mt-10">
+                                <h3 class="price-detail" text-xl md:text-2xl>$4.99</h3>
+                                <p class="stock-detail mt-3 md:mt-5">IN STOCK</p>
+                                <p class="span-product mt-3 md:mt-5 text-sm md:text-base">Vivamus adipiscing nisl ut dolor dignissim semper. Nulla luctus malesuada tincidunt. Class aptent taciti sociosqu ad litora torquent</p>
+                                
+                                <form class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+                                    <div class="flex items-center rounded-full overflow-hidden border border-gray-200 w-full sm:w-[200px]">
+                                        <button class="flex-1 bg-gray-100 text-gray-700 py-2" type="button">−</button>
+                                        <input type="number" class="w-1/3 text-center outline-none border-none" />
+                                        <button class="flex-1 bg-gray-100 text-gray-800 py-2" type="button">+</button>
+                                    </div>
+                                    
+                                    <button type="submit" class="w-full sm:w-auto bg-p-500 py-2 px-6 md:px-8 text-white rounded-full hover:bg-green-800">
+                                        Add to cart
+                                    </button>
+                                </form>
+                                
+                                <div class="flex items-center gap-5 mt-5">
+                                    <a href="/">
+                                        <div class="flex gap-2 items-center border border-gray-200 rounded-full py-2 px-3 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                                </svg>
+                                                <p class="span-product">Add to wishlist</p>
+                                            
+                                        </div>
+                                    </a> 
+                                    <a href="/">
+                                        <div class="flex gap-2 items-center border border-gray-200 rounded-full py-2 px-3 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+                                            </svg>
+                                            <p class="span-product"> Compare</p>
+                                            
+                                        </div>
+                                    </a> 
+                                </div>
+
+                                <div class="mt-6 flex flex-col md:flex-row gap-4 md:gap-10 text-sm">
+                                    <div class="flex items-center gap-2">
+                                       <div class="flex items-center gap-1"> 
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 36 36"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 36 36"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 36 36"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 36 36"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"/></svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 36 36"><path fill="#FFAC33" d="M27.287 34.627c-.404 0-.806-.124-1.152-.371L18 28.422l-8.135 5.834a1.97 1.97 0 0 1-2.312-.008a1.971 1.971 0 0 1-.721-2.194l3.034-9.792l-8.062-5.681a1.98 1.98 0 0 1-.708-2.203a1.978 1.978 0 0 1 1.866-1.363L12.947 13l3.179-9.549a1.976 1.976 0 0 1 3.749 0L23 13l10.036.015a1.975 1.975 0 0 1 1.159 3.566l-8.062 5.681l3.034 9.792a1.97 1.97 0 0 1-.72 2.194a1.957 1.957 0 0 1-1.16.379z"/></svg>
+                                        </div>
+                                        <span class="span-product">5 review</span>
+                                    </div>
+                                    
+                                    <div class="flex gap-3">
+                                        <span class="span-product">SKU:</span>
+                                        <span class="text-sm font-semibold text-gray-500">ZR3VORT</span>
+                                    </div>
+
+                                </div>
+
+                                <hr class="my-8">
+
+                                <div >
+                                    <span class="span-product">Category: <a class="text-md font-semibold text-gray-500 hover:underline" href="../page-shop.html">Breads & Bakery</a></span>
+                                </div>
+
+
+                                <div class="mt-8 flex items-center gap-3">
+                                        <a href="/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256">
+                                                <path fill="#1877F2" d="M256 128C256 57.308 198.692 0 128 0C57.308 0 0 57.307 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.347-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.958 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445"/>
+                                                <path fill="#FFF" d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A128.959 128.959 0 0 0 128 256a128.9 128.9 0 0 0 20-1.555V165h29.825"/>
+                                            </svg>
+                                        </a>
+
+                                        <a href="/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="#CB1F27" d="M0 128.002c0 52.414 31.518 97.442 76.619 117.239c-.36-8.938-.064-19.668 2.228-29.393c2.461-10.391 16.47-69.748 16.47-69.748s-4.089-8.173-4.089-20.252c0-18.969 10.994-33.136 24.686-33.136c11.643 0 17.268 8.745 17.268 19.217c0 11.704-7.465 29.211-11.304 45.426c-3.207 13.578 6.808 24.653 20.203 24.653c24.252 0 40.586-31.149 40.586-68.055c0-28.054-18.895-49.052-53.262-49.052c-38.828 0-63.017 28.956-63.017 61.3c0 11.152 3.288 19.016 8.438 25.106c2.368 2.797 2.697 3.922 1.84 7.134c-.614 2.355-2.024 8.025-2.608 10.272c-.852 3.242-3.479 4.401-6.409 3.204c-17.884-7.301-26.213-26.886-26.213-48.902c0-36.361 30.666-79.961 91.482-79.961c48.87 0 81.035 35.364 81.035 73.325c0 50.213-27.916 87.726-69.066 87.726c-13.819 0-26.818-7.47-31.271-15.955c0 0-7.431 29.492-9.005 35.187c-2.714 9.869-8.026 19.733-12.883 27.421a127.897 127.897 0 0 0 36.277 5.249c70.684 0 127.996-57.309 127.996-128.005C256.001 57.309 198.689 0 128.005 0C57.314 0 0 57.309 0 128.002Z"/></svg>
+                                         </a>
+
+                                         <a href="/">
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 258"><defs><linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1FAF38"/><stop offset="100%" stop-color="#60D669"/></linearGradient><linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#F9F9F9"/><stop offset="100%" stop-color="#FFF"/></linearGradient></defs><path fill="url(#logosWhatsappIcon0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a122.994 122.994 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/><path fill="url(#logosWhatsappIcon1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416Zm40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513l10.706-39.082Z"/><path fill="#ffffff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561c0 15.67 11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716c-3.186-1.593-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/></svg>
+                                         </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1">
+                            <div class="w-full mt-6 lg:mt-0">
+                                <div class="bg-red-100  text-center py-2 rounded text-sm">
+                                    <p class="text-sm  text-n-600 ">Covid-19 Info: We keep delivering.</p>
+                                </div>
+                                <div class="bg-gray-100 mt-4 p-4 space-y-5">
+                                    <div class="flex gap-2 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32"><path fill="#000000" d="M0 6v2h19v15h-6.156c-.446-1.719-1.992-3-3.844-3c-1.852 0-3.398 1.281-3.844 3H4v-5H2v7h3.156c.446 1.719 1.992 3 3.844 3c1.852 0 3.398-1.281 3.844-3h8.312c.446 1.719 1.992 3 3.844 3c1.852 0 3.398-1.281 3.844-3H32v-8.156l-.063-.157l-2-6L29.72 10H21V6zm1 4v2h9v-2zm20 2h7.281L30 17.125V23h-1.156c-.446-1.719-1.992-3-3.844-3c-1.852 0-3.398 1.281-3.844 3H21zM2 14v2h6v-2zm7 8c1.117 0 2 .883 2 2s-.883 2-2 2s-2-.883-2-2s.883-2 2-2zm16 0c1.117 0 2 .883 2 2s-.883 2-2 2s-2-.883-2-2s.883-2 2-2z"/></svg>
+                                        <span class="span-product">Free Shipping apply to all orders over $100</span>
+                                    </div>
+                                    <div class=" flex gap-2 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1025 1024"><path fill="#000000" d="M992.857 1024h-960q-13 0-22.5-9.5T.857 992V416q0-78 8-86l120-120V32q0-13 9.5-22.5t22.5-9.5h640q13 0 22.5 9.5t9.5 22.5v160l160 128q15 15 22.5 33.5t8.5 29.5t1 33v576q0 13-9.5 22.5t-22.5 9.5zm-928-64h512V448h-512v512zm0-576h512l128-128h-512zm704-320h-576v128h576V64zm32 192l-128 128h288zm160 192h-320v512h320V448z"/></svg>
+                                        <span class="span-product">Guranteed 100% Organic from natural farmas</span>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#000000"><g fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12 21.5a9.5 9.5 0 1 0 0-19a9.5 9.5 0 0 0 0 19"/><path d="M9 14.433a2.82 2.82 0 0 0 3 2.57c2.42 0 3-1.39 3-2.57s-1-2.43-3-2.43s-3-.79-3-2.4a2.75 2.75 0 0 1 3-2.6a2.89 2.89 0 0 1 3 2.6M12 18.5v-1.3m0-11.7v1.499"/></g></svg>
+                                        <span class="span-product">1 Day Returns if you change your mind</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- mo ta san pham -->
+                <div class="bg-white px-10 py-10 mt-10 w-full rounded-md shadow-sm">
+                    <ul class=" flex items-center gap-10 cursor-pointer ">
+                        <li class="li-detail"><a href="/">Description</a></li>
+                        <li class="li-detail"><a href="/">Reviews</a></li>
+                    </ul>
+                    <hr class="my-6 bg-gray-200">
+                    <div>
+                        <p class="text-sm leading-5">Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.
+
+                        <br>
+                        Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend nunc a, lobortis neque. Praesent aliquam dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit amet, maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam, sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo vel.</p>
+                    </div>
+                </div>
+
+
+                <!-- San pham lien quan -->
+
+                <div class="mt-10">
+
+                    <h3 class="mb-5 h3-detail">Related products</h3>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border border-gray-200 rounded-sm overflow-hidden">
+                        
+                        <!-- item -->
+                        <div class="relative p-4 md:p-5 border-r border-b border-gray-100">
+                            <a href="../page-shop.html">
+                                <span class="absolute top-3 left-3 bg-p-500 rounded px-2 py-1 text-xs md:text-sm text-white">
+                                22%
+                            </span>
+
+                            <img
+                                class="mx-auto object-contain h-24 md:h-32"
+                                src="../../../assets/product/product-sale-1.jpg"
+                                alt="product"
+                            />
+
+                            <h3 class="heading-3 mb-2">
+                                All Natural Italian-Style <br />Chicken Meatballs
+                            </h3>
+
+                            <p class="p-stock mb-2 text-xs md:text-sm">IN STOCK</p>
+
+                            <div class="flex gap-2">
+                                <img class="h-4" src="./assets/product/ratting-product.png" />
+                                <span class="s-review text-xs">1 review</span>
+                            </div>
+
+                            <div class="mt-2 flex items-center gap-2">
+                                <p class="price-sale text-xs md:text-sm">$9.35</p>
+                                <p class="price-product text-sm md:text-base">$7.25</p>
+                            </div>
+
+                            <button class="btn-product">
+                                Add to cart
+                            </button>
+                            </a>
+                        </div>
+
+                        <div class="relative p-4 md:p-5 border-r border-b border-gray-100">
+                            <a href="../page-shop.html">
+                                <span class="absolute top-3 left-3 bg-p-500 rounded px-2 py-1 text-xs md:text-sm text-white">
+                                22%
+                            </span>
+
+                            <img
+                                class="mx-auto object-contain h-24 md:h-32"
+                                src="../../../assets/product/product-sale-1.jpg"
+                                alt="product"
+                            />
+
+                            <h3 class="heading-3 mb-2">
+                                All Natural Italian-Style <br />Chicken Meatballs
+                            </h3>
+
+                            <p class="p-stock mb-2 text-xs md:text-sm">IN STOCK</p>
+
+                            <div class="flex gap-2">
+                                <img class="h-4" src="./assets/product/ratting-product.png" />
+                                <span class="s-review text-xs">1 review</span>
+                            </div>
+
+                            <div class="mt-2 flex items-center gap-2">
+                                <p class="price-sale text-xs md:text-sm">$9.35</p>
+                                <p class="price-product text-sm md:text-base">$7.25</p>
+                            </div>
+
+                            <button class="btn-product">
+                                Add to cart
+                            </button>
+                            </a>
+                        </div>
+
+
+                        <div class="relative p-4 md:p-5 border-r border-b border-gray-100">
+                            <a href="../page-shop.html">
+                                <span class="absolute top-3 left-3 bg-p-500 rounded px-2 py-1 text-xs md:text-sm text-white">
+                                22%
+                            </span>
+
+                            <img
+                                class="mx-auto object-contain h-24 md:h-32"
+                                src="../../../assets/product/product-sale-1.jpg"
+                                alt="product"
+                            />
+
+                            <h3 class="heading-3 mb-2">
+                                All Natural Italian-Style <br />Chicken Meatballs
+                            </h3>
+
+                            <p class="p-stock mb-2 text-xs md:text-sm">IN STOCK</p>
+
+                            <div class="flex gap-2">
+                                <img class="h-4" src="./assets/product/ratting-product.png" />
+                                <span class="s-review text-xs">1 review</span>
+                            </div>
+
+                            <div class="mt-2 flex items-center gap-2">
+                                <p class="price-sale text-xs md:text-sm">$9.35</p>
+                                <p class="price-product text-sm md:text-base">$7.25</p>
+                            </div>
+
+                            <button class="btn-product">
+                                Add to cart
+                            </button>
+                            </a>
+                        </div>
+
+
+                        <div class="relative p-4 md:p-5 border-r border-b border-gray-100">
+                            <a href="../page-shop.html">
+                                <span class="absolute top-3 left-3 bg-p-500 rounded px-2 py-1 text-xs md:text-sm text-white">
+                                22%
+                            </span>
+
+                            <img
+                                class="mx-auto object-contain h-24 md:h-32"
+                                src="../../../assets/product/product-sale-1.jpg"
+                                alt="product"
+                            />
+
+                            <h3 class="heading-3 mb-2">
+                                All Natural Italian-Style <br />Chicken Meatballs
+                            </h3>
+
+                            <p class="p-stock mb-2 text-xs md:text-sm">IN STOCK</p>
+
+                            <div class="flex gap-2">
+                                <img class="h-4" src="./assets/product/ratting-product.png" />
+                                <span class="s-review text-xs">1 review</span>
+                            </div>
+
+                            <div class="mt-2 flex items-center gap-2">
+                                <p class="price-sale text-xs md:text-sm">$9.35</p>
+                                <p class="price-product text-sm md:text-base">$7.25</p>
+                            </div>
+
+                            <button class="btn-product">
+                                Add to cart
+                            </button>
+                            </a>
+                        </div>
+
+                        <div class="relative p-4 md:p-5 border-r border-b border-gray-100">
+                            <a href="../page-shop.html">
+                                <span class="absolute top-3 left-3 bg-p-500 rounded px-2 py-1 text-xs md:text-sm text-white">
+                                22%
+                            </span>
+
+                            <img
+                                class="mx-auto object-contain h-24 md:h-32"
+                                src="../../../assets/product/product-sale-1.jpg"
+                                alt="product"
+                            />
+
+                            <h3 class="heading-3 mb-2">
+                                All Natural Italian-Style <br />Chicken Meatballs
+                            </h3>
+
+                            <p class="p-stock mb-2 text-xs md:text-sm">IN STOCK</p>
+
+                            <div class="flex gap-2">
+                                <img class="h-4" src="./assets/product/ratting-product.png" />
+                                <span class="s-review text-xs">1 review</span>
+                            </div>
+
+                            <div class="mt-2 flex items-center gap-2">
+                                <p class="price-sale text-xs md:text-sm">$9.35</p>
+                                <p class="price-product text-sm md:text-base">$7.25</p>
+                            </div>
+
+                            <button class="btn-product">
+                                Add to cart
+                            </button>
+                            </a>
+                        </div>
+                        
+                    </div>
+        </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <footer class="mt-8">
+
+      <!-- email liên hệ -->
+        <section class="bg-p-500 w-full mx-auto flex items-center justify-center ">
+              <div class="container flex flex-col lg:flex-row justify-between items-center ">
+                  <div class="py-10">
+                    
+                       <p class=" font-light text-[16px] text-white leading-4 mb-2"><span class="underline">$20 discount</span> for your first order</p>
+                       <h2 class="font-inter font-semibold text-[26px] leading-8 text-white">Join our newsletter and get...</h2>
+                       <p class="text-white font-normal leading-6 text-[13px] mt-2">Join our email subscription now to get updates <br>on promotions and coupons.</p>
+                     
+                       <form class="mt-4 bg-white   md:w-auto sm:max-w-[380px] lg:mx-0 p-2 rounded-lg shadow-md flex flex-col sm:flex-row  ">
+          
+                            <div class="flex-grow flex items-center  focus-within:outline-none">
+                              <!-- Email Icon -->
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9B9BB4" class="w-5 h-5 ml-3 shrink-0">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                              </svg>
+                              
+                              <!-- Input  -->
+                              <input 
+                                type="email" 
+                                placeholder="Your email address" 
+                                class="w-full p-3 outline-none text-[#202435] font-inter text-sm md:text-base bg-transparent placeholder:text-gray-400"
+                                required
+                              >
+                            </div>
+
+                            
+                              <button 
+                                type="submit" 
+                                class="bg-p-500 hover:bg-green-950 text-white font-dosis font-semibold text-sm px-6 py-3 rounded transition-all duration-200 shadow-sm whitespace-nowrap w-full sm:w-auto">
+                                    Subscribe
+                              </button>
+                          </form>
+                  </div>
+                  <img src="../../../assets/product/coupon.png.png"  alt="coupon" class="w-[200px] sm:w-[260px] md:w-[320px] lg:w-auto max-h-[220px] md:max-h-[260px] h-auto object-cover lg:relative lg:top-1.5  lg:mt-0 "/>
+              </div>
+              
+          </section>
+
+
+         <section class="bg-[#F7F8FD]">
+          <div class="container mx-auto">
+              <div class=" border-b border-gray-200 py-7 lg:px-10 grid lg:grid-cols-4 md:grid-cols-2 justify-center gap-14">
+                    <div class="flex gap-4 items-center w-full max-w-[250px] justify-center sm:justify-start text-center sm:text-left">
+                      <img src="../../../assets/icon/Vector 1.png" class="w-6 h-6">
+                      <p class="text-sm">Everyday fresh products</p>
+                    </div>
+                    
+                    <div class="flex gap-4 items-center w-full max-w-[250px] justify-center sm:justify-start text-center sm:text-left">
+                      <img src="../../../assets/icon/Vector 1.png" class="w-6 h-6">
+                      <p class="text-sm">Everyday fresh products</p>
+                    </div>
+                    <div class="flex gap-4 items-center w-full max-w-[250px] justify-center sm:justify-start text-center sm:text-left">
+                      <img src="../../../assets/icon/Vector 1.png" class="w-6 h-6">
+                      <p class="text-sm">Everyday fresh products</p>
+                    </div>
+
+                    <div class="flex gap-4 items-center w-full max-w-[250px] justify-center sm:justify-start text-center sm:text-left">
+                      <img src="../../../assets/icon/Vector 1.png" class="w-6 h-6">
+                      <p class="text-sm">Everyday fresh products</p>
+                    </div>
+                </div>
+            </div>
+
+           <div class=" container lg:mt-20 grid lg:grid-cols-5 md:grid-cols-2  ">
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+              
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+
+
+              <div class="">
+                <h3 class="py-1 ft-healding-2">Fruit & Vegetables</h3>
+                <ul class="flex flex-col gap-3">
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                  <li class="ft-li"><a href="#">Fresh Vegetables</a></li>
+                </ul>
+              </div>
+
+           </div> 
+          </section>
+
+          
+
+
+    </footer>
+</body>
+</html>

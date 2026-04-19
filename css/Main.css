@@ -1,0 +1,297 @@
+@import "tailwindcss";
+
+/** Theme **/
+/* Screen */
+@theme{
+ --breakpoint-sm: 30rem; /*480px*/
+  --breakpoint-md: 48rem; /*768px*/
+  --breakpoint-lg: 80rem; /*1280px*/
+  --breakpoint-xl: 87.5rem; /*1400px*/
+  --breakpoint-2xl: 96rem; /*1536px*/
+
+
+/* font */
+    --font-dosis: "Dosis", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    /* color */
+    --color-p-500: #35afa0;
+    --color-n-600: #ED174A;
+}
+
+
+
+@layer base{
+  html {
+    @apply scroll-smooth ;
+  }
+  body{
+    @apply text-base font-inter overflow-x-clip  ;
+  }
+   /* xóa số tăng/giảm trong <input type numeber> */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+
+
+  h1, h2, h4, h5, h6 {
+    font-family: var(--font-dosis);
+    color: #202435;
+    cursor: pointer;
+  }
+  p{
+    font-family: var(--font-inter);
+    color: #202435;
+  }
+  li{
+    font-family: var(--font-dosis);
+     @apply font-semibold text-[#3E445A]
+  }
+
+  
+
+
+
+
+  
+
+  
+}
+@utility container {
+          margin-inline: auto;
+          width: 100%;
+          max-width: 1920px;
+          padding-inline: 1rem; /* Tránh dính sát viền trên mobile */
+
+          @media (width >= 87.5rem) { /* Khi màn hình từ 1400px trở lên */
+            padding-inline: 273px; /* Trả lại lề 273px như bạn mong muốn ở trên Desktop */
+          }    
+}
+
+@utility font-dosis {
+  font-family: var(--font-dosis)}
+
+ @utility font-inter {
+  font-family: var(--font-inter);
+} 
+
+
+
+@layer components {
+
+ 
+  
+  /* flex */
+  .flex-item{
+    @apply flex gap-2.5 items-center;
+  }
+
+  .flex-between{
+    @apply flex justify-between items-center;
+  }
+  
+  
+  .menu-link {
+    @apply inline-flex items-center justify-center gap-1 rounded-full px-4 py-2.5 transition-all duration-200;
+  }
+
+  .menu-link:hover {
+    @apply bg-[#F0FAFF] text-p-500 font-semibold;
+  }
+
+  .menu-link svg {
+    @apply w-4 h-4;
+  }
+
+  
+
+
+  /* product title */
+  .heading-3{
+   @apply font-inter font-semibold text-sm md:text-base text-[#202435] leading-snug;
+  }
+
+
+
+  .p-stock{
+    @apply font-dosis font-semibold text-[11px] text-p-500 leading-4 uppercase;
+  }
+
+  .s-review{
+    @apply font-dosis font-semibold text-[13px] text-[#71778E] leading-4;
+  }
+  
+  .price-sale{
+    @apply font-dosis font-semibold text-[16px] text-[#C2C2D3] leading-5 line-through;
+  }
+
+  .price-product{
+    @apply font-dosis font-semibold text-[18px] text-n-600 leading-7;
+  }
+
+  .btn-product{
+     @apply mt-3 w-full bg-amber-400 rounded-full py-1.5 md:py-2 text-sm flex items-center justify-center;
+  }
+
+    /* Headling Discount*/
+
+    .heading-discount-2{
+      @apply font-inter font-semibold text-[24px] leading-5 text-[#3E445A]
+    }
+
+    .heading-discount-3{
+        @apply font-dosis font-semibold text-[14px] leading-5 uppercase text-[#00B853];
+    }
+
+    .p-discount{
+      @apply font-inter font-normal text-[12px] leading-4 text-[#9B9BB4];
+    }
+
+    .btn-discount{
+      @apply text-white bg-[#C2C2D3] w-[100px] px-2 h-9 rounded-full mt-5 hover:bg-gray-300;
+    }
+
+    /* Blog */
+    .card-blog{
+      @apply  rounded-xl overflow-hidden cursor-pointer  hover:shadow-lg transition-shadow duration-300  ;
+    }
+
+    .card-img {
+    @apply w-full object-cover;
+  }
+
+  .card-category {
+    @apply text-xs uppercase text-gray-500 mb-2 tracking-wide;
+    
+  }
+
+  .card-t-2{
+      @apply font-inter font-semibold text-[20px] text-[#202435] 
+         line-clamp-2 overflow-hidden whitespace-normal;
+  }
+  .card-date{
+    @apply font-inter font-medium text-[14px]
+  }
+
+  /* footer */
+  .ft-healding-2{
+    @apply font-dosis font-semibold font-[15px] uppercase leading-5;
+  }
+
+  .ft-li{
+    @apply font-inter font-normal text-[13px] leading-5;
+  }
+
+  /* breadcrumb */
+
+  .breadcrumb-title-home {
+    @apply font-dosis font-semibold text-[12px] leading-5 uppercase text-[#3E445A];
+  }
+
+  .breadcrumb-prodcut{
+    @apply font-dosis font-semibold text-[12px] leading-5 uppercase text-[#9B9BB4] ;
+  }
+
+  /* Page Shop */
+
+  .h4-product{
+      @apply font-dosis font-semibold text-[15px] uppercase leading-5 text-[#202435];
+  }
+
+  .span-product{
+    @apply font-inter font-normal text-sm leading-5 text-[#71778E];
+  }
+
+  .label-product{
+    @apply font-inter font-normal text-[#71778E] text-[13px] leading-5;
+  }
+
+  /* tìm kiếm số trang */
+  .sp-link {
+    @apply w-9 h-9 flex items-center justify-center rounded-full text-gray-800 cursor-pointer transition-colors;
+  }
+
+  .sp-link:hover {
+    @apply bg-p-500 text-white;
+  }
+
+  .sp-link-active {
+    @apply bg-p-500 text-white;
+  }
+
+
+  /* blog content */
+
+  .s-blog{
+    @apply font-dosis font-semibold text-[13px] text-[#9B9BB4] leading-5 uppercase;
+  }
+  .h2-blog{
+    @apply font-inter font-semibold text-[36px] text-[#202435] leading-11;
+  }
+
+  /* chỉnh text bài viết điều đẹp */
+  .t-blog{
+    @apply text-sm tracking-wide text-justify leading-7;
+  }
+
+  .p-blog{
+    @apply font-inter font-medium text-[14px] text-[#202435] leading-5;
+  }
+
+  .s-link-date{
+    @apply font-inter font-medium text-[14px] leading-5 text-[#71778E] ;
+  }
+
+  .s-link-date:hover{
+    @apply  underline
+  }
+
+  .p-cotent{
+    @apply font-inter font-normal text-[15px] text-[#202435] leading-7;
+  }
+
+  .rig-blog{
+    @apply text-[14px] font-inter font-medium text-[#202435] leading-5;
+  }
+
+  /* bên trái */
+  .heading-blog{
+    @apply  font-semibold uppercase text-[15px]  leading-5;  
+  }
+
+  .tg-blog{
+    @apply font-inter font-normal text-[14px] leading-5;
+  }
+
+  /* checkout */
+
+  .heading-checkout{
+    @apply font-bold text-[21px] leading-6;
+  }
+
+
+  /* Product-detail */
+
+  .price-detail{
+    @apply font-semibold uppercase text-3xl leading-5 text-n-600;
+  }
+
+  .stock-detail{
+    @apply font-dosis font-semibold text-[14px] bg-[#e5f8ed]  py-3 px-3 flex justify-center items-center rounded-full w-[100px] text-p-500 leading-4 uppercase;
+  }
+
+  .li-detail{
+    @apply font-dosis font-semibold text-[20px] leading-5;
+  }
+
+  .h3-detail{
+    @apply font-dosis font-semibold text-[20px] leading-5;
+  }
+} 
+
+
